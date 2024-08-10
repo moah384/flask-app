@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetic Retinopathy Prediction</title>
+</head>
+<body>
+    <h2>Diabetic Retinopathy Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="mrn">MRN:</label><br>
+        <input type="text" id="mrn" name="mrn" required><br>
+
+        <label for="date">Date of Imaging:</label><br>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="F">Female</option>
+            <option value="M">Male</option>
+        </select><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age" required><br>
+
+        <label for="hypertension">Hypertension:</label><br>
+        <select id="hypertension" name="hypertension" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <label for="a1c">A1c:</label><br>
+        <input type="text" id="a1c" name="a1c" required><br>
+
+        <label for="duration">Duration Of Diabetes:</label><br>
+        <input type="text" id="duration" name="duration" required><br>
+
+        <label for="therapy">Therapy:</label><br>
+        <select id="therapy" name="therapy" required>
+            <option value="combined">Combined</option>
+            <option value="tablets">Tablets</option>
+            <option value="insulin">Insulin</option>
+        </select><br>
+
+        <label for="cardiac">Cardiac:</label><br>
+        <select id="cardiac" name="cardiac" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <label for="neuropathy">Neuropathy:</label><br>
+        <select id="neuropathy" name="neuropathy" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <label for="renal">Renal:</label><br>
+        <select id="renal" name="renal" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <label for="smoking">Smoking:</label><br>
+        <select id="smoking" name="smoking" required>
+            <option value="current">Current</option>
+            <option value="never">Never</option>
+            <option value="past">Past</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <br>
+    <a href="/patients"><button>View All Entries</button></a>
+    <a href="/download"><button>Download Entries</button></a>
+</body>
+</html>

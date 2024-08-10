@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>MRN: {{ mrn }}</p>
+    <p>Date: {{ date }}</p>
+    <p>Prediction: {{ prediction }}</p>
+    <p>Probability: {{ probability }}</p>
+
+    <!-- Form to add ground truth -->
+    <form action="/update_ground_truth" method="post">
+        <input type="hidden" name="mrn" value="{{ mrn }}">
+        <input type="hidden" name="prediction_id" value="{{ prediction_id }}">
+        <label for="ground_truth">Ground Truth:</label>
+        <select id="ground_truth" name="ground_truth" required>
+            <option value="MTMR">MTMR</option>
+            <option value="Non-MTMR">Non-MTMR</option>
+        </select>
+        <input type="submit" value="Submit Ground Truth">
+    </form>
+
+    <br>
+    <div class="button-container">
+        <a href="/"><button>Next Patient</button></a>
+        <a href="/patients"><button>View All Results</button></a>
+    </div>
+</body>
+</html>
